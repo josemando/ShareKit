@@ -471,7 +471,7 @@ static NSString *const kSHKTwitterUserInfo=@"kSHKTwitterUserInfo";
 		if (serializator) {
 			userInfo = [serializator JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
 		} else {
-			userInfo = [[JSONDecoder decoder] mutableObjectWithData:data error:&error];
+			userInfo = [[CDVJSONDecoder decoder] mutableObjectWithData:data error:&error];
 		}    
 		
 		if (error) {
